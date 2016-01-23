@@ -2,7 +2,7 @@
 //  DefaultRegistrationViewController.swift
 //  WhatsAuto
 //
-//  Created by Taimoor Rana on 2016-01-18.
+//  Created by Taimoor Rana on 2016-01-23.
 //  Copyright © 2016 Taimoor Rana. All rights reserved.
 //
 
