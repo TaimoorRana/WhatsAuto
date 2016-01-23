@@ -104,8 +104,8 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
 			resultsQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error:NSError?) -> Void in
 				if objects?.count > 0 {
 					for object in objects!{
-                        let plate = object["LicensePlate"] as! String
-                        if plate != currentUser!["LicensePlate"] as! String{
+                        let plate = object["licensePlate"] as! String
+                        if plate != currentUser!["licensePlate"] as! String{
                             self.filteredAppleResults.append(object["licensePlate"] as! String)
                         }
 					}
