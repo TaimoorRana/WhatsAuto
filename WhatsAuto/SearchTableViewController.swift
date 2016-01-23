@@ -2,7 +2,7 @@
 //  SearchTableViewController.swift
 //  WhatsAuto
 //
-//  Created by Taimoor Rana on 2016-01-19.
+//  Created by Taimoor Rana on 2016-01-23.
 //  Copyright © 2016 Taimoor Rana. All rights reserved.
 //
 
@@ -68,15 +68,17 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
 	
 	override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 		let cell = tableView.cellForRowAtIndexPath(indexPath)! as UITableViewCell;
-		let searchUser = PFQuery(className: "_User")
-		searchUser.whereKey("licensePlate", equalTo: (cell.textLabel?.text)!)
-		searchUser.getFirstObjectInBackgroundWithBlock { (object:PFObject?, error:NSError?) -> Void in
+
+		if ((cell.textLabel?.text)! != ""){
+			let searchUser = PFQuery(className: "_User")
+			searchUser.whereKey("licensePlate", equalTo: (cell.textLabel?.text)!)
+			searchUser.getFirstObjectInBackgroundWithBlock { (object:PFObject?, error:NSError?) -> Void in
 				otherUser = object!["email"] as! String
+			}
+			
+			resultSearchController.active = false
+			performSegueWithIdentifier("GoToConversationVC", sender: self)
 		}
-		resultSearchController.active = false
-        
-		performSegueWithIdentifier("GoToConversationVC", sender: self)
-		
 	}
 
 	
