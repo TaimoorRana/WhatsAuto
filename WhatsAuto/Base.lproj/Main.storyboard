@@ -25,12 +25,12 @@
                                     <action selector="SignInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chs-s5-Vwi"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Plate Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CHC-RW-S4A">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tom@gmail.com" borderStyle="roundedRect" placeholder="Email or Plate Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CHC-RW-S4A">
                                 <rect key="frame" x="61" y="172" width="209" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aqa-eY-e9F">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1234" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aqa-eY-e9F">
                                 <rect key="frame" x="61" y="241" width="209" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -81,43 +81,11 @@
                         <outlet property="passwordTF" destination="aqa-eY-e9F" id="YOX-dU-bBq"/>
                         <outlet property="registerButton" destination="JG0-dx-OW3" id="1VL-ni-V13"/>
                         <segue destination="Wu2-d4-OK5" kind="show" identifier="LoginToMain" id="QgX-Fs-hfe"/>
-                        <segue destination="iTt-8x-fRh" kind="show" identifier="GoToFBRegistration" id="UIR-64-U21"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1998" y="545"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Bhq-L5-2QM">
-            <objects>
-                <viewController id="iTt-8x-fRh" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="KSX-IO-CA1"/>
-                        <viewControllerLayoutGuide type="bottom" id="3HQ-zo-NJn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vvZ-bf-Azv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mZA-lI-C84">
-                                <rect key="frame" x="112" y="97" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N1h-Ao-TSI">
-                                <rect key="frame" x="112" y="150" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kvf-iV-6DR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2601" y="960"/>
         </scene>
         <!--Default Registration View Controller-->
         <scene sceneID="P9Q-h5-tvs">
@@ -189,7 +157,7 @@
             <objects>
                 <tableViewController id="Wu2-d4-OK5" customClass="SearchTableViewController" customModule="WhatsAuto" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Mwn-Jr-xlf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -216,7 +184,15 @@
                             <outlet property="delegate" destination="Wu2-d4-OK5" id="a7U-zW-wvm"/>
                         </connections>
                     </tableView>
-                    <toolbarItems/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="dn7-Vg-rtH"/>
+                        <barButtonItem title="Sign Out" id="U2V-LZ-tBU">
+                            <connections>
+                                <action selector="SignoutClicked:" destination="Wu2-d4-OK5" id="nCA-ty-As5"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -311,6 +287,6 @@
         <image name="default_car.jpg" width="310" height="310"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yif-rn-kSZ"/>
+        <segue reference="QgX-Fs-hfe"/>
     </inferredMetricsTieBreakers>
 </document>

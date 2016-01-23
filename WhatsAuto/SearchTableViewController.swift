@@ -11,6 +11,10 @@ import Parse
 
 class SearchTableViewController: UITableViewController, UISearchResultsUpdating {
 
+    @IBAction func SignoutClicked(sender: AnyObject) {
+        PFUser.logOut()
+        print("logout")
+    }
 	let appleProducts = [""]
 	var filteredAppleResults = [String]()
 	var resultSearchController = UISearchController()
