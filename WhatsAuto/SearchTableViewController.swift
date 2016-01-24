@@ -10,7 +10,7 @@ import UIKit
 import Parse
 
 class SearchTableViewController: UITableViewController, UISearchResultsUpdating {
-
+    
     @IBAction func SignoutClicked(sender: AnyObject) {
         PFUser.logOut()
         print("logout")
@@ -36,7 +36,7 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
 				
 		tableView.tableHeaderView = resultSearchController.searchBar
 		tableView.reloadData()
-		
+
 		
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

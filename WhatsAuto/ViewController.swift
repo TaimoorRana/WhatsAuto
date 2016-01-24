@@ -22,6 +22,12 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view, typically from a nib.
 		registerButton.layer.cornerRadius = 3
+        
+        if(PFUser.currentUser() != nil){
+            PFUser.logOut()
+        }
+        
+        
 	}
 	
 	@IBAction func FBLoginClicked(sender: AnyObject) {
@@ -46,7 +52,7 @@ class ViewController: UIViewController {
 	}
 	
 	@IBAction func SignInClicked(sender: AnyObject) {
-		PFUser.logInWithUsernameInBackground(emailOrPlateNumberTF.text!, password: passwordTF.text!) { (user:PFUser?, error:NSError?) -> Void in
+    PFUser.logInWithUsernameInBackground(emailOrPlateNumberTF.text!, password: passwordTF.text!) { (user:PFUser?, error:NSError?) -> Void in
 			if user != nil {
 				dispatch_async(dispatch_get_main_queue()){
 					
@@ -55,6 +61,7 @@ class ViewController: UIViewController {
 				}
 			}
 		}
+        
 	}
 	
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
