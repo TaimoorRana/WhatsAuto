@@ -25,7 +25,6 @@
 		A427A1F21C4C7DDB007D3AAD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A427A1F11C4C7DDB007D3AAD /* QuartzCore.framework */; };
 		A427A1F41C4C7DE4007D3AAD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A427A1F31C4C7DE4007D3AAD /* Security.framework */; };
 		A427A1F61C4C7DED007D3AAD /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A427A1F51C4C7DED007D3AAD /* Social.framework */; };
-		A427A1F81C4C7DF5007D3AAD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A427A1F71C4C7DF5007D3AAD /* StoreKit.framework */; };
 		A427A1FA1C4C7DFD007D3AAD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A427A1F91C4C7DFD007D3AAD /* SystemConfiguration.framework */; };
 		A427A1FC1C4C7E06007D3AAD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A427A1FB1C4C7E06007D3AAD /* libz.tbd */; };
 		A427A1FE1C4C7E17007D3AAD /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A427A1FD1C4C7E17007D3AAD /* libsqlite3.tbd */; };
@@ -82,7 +81,6 @@
 		A427A1F11C4C7DDB007D3AAD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A427A1F31C4C7DE4007D3AAD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		A427A1F51C4C7DED007D3AAD /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		A427A1F71C4C7DF5007D3AAD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		A427A1F91C4C7DFD007D3AAD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A427A1FB1C4C7E06007D3AAD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		A427A1FD1C4C7E17007D3AAD /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -107,7 +105,6 @@
 				A427A1FE1C4C7E17007D3AAD /* libsqlite3.tbd in Frameworks */,
 				A427A1FC1C4C7E06007D3AAD /* libz.tbd in Frameworks */,
 				A427A1FA1C4C7DFD007D3AAD /* SystemConfiguration.framework in Frameworks */,
-				A427A1F81C4C7DF5007D3AAD /* StoreKit.framework in Frameworks */,
 				A427A1F61C4C7DED007D3AAD /* Social.framework in Frameworks */,
 				A427A1F41C4C7DE4007D3AAD /* Security.framework in Frameworks */,
 				A427A1F21C4C7DDB007D3AAD /* QuartzCore.framework in Frameworks */,
@@ -211,7 +208,6 @@
 				A427A1FD1C4C7E17007D3AAD /* libsqlite3.tbd */,
 				A427A1FB1C4C7E06007D3AAD /* libz.tbd */,
 				A427A1F91C4C7DFD007D3AAD /* SystemConfiguration.framework */,
-				A427A1F71C4C7DF5007D3AAD /* StoreKit.framework */,
 				A427A1F51C4C7DED007D3AAD /* Social.framework */,
 				A427A1F31C4C7DE4007D3AAD /* Security.framework */,
 				A427A1F11C4C7DDB007D3AAD /* QuartzCore.framework */,
@@ -294,6 +290,15 @@
 				TargetAttributes = {
 					A427A1AD1C4C7C43007D3AAD = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 873KBTV84P;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A427A1C41C4C7C44007D3AAD = {
 						CreatedOnToolsVersion = 7.2;
@@ -505,6 +510,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -513,6 +520,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rana.WhatsAuto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -520,6 +528,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -528,6 +538,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rana.WhatsAuto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
