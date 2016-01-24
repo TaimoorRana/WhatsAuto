@@ -39,6 +39,12 @@ class DefaultRegistrationViewController: UIViewController {
                 currentInstallation.addUniqueObject("user", forKey: "channels")
                 currentInstallation["user"] = self.emailTF.text!
                 currentInstallation.saveInBackground()
+                
+                dispatch_async(dispatch_get_main_queue()){
+                    
+                    self.performSegueWithIdentifier("RegisterToMain", sender: self)
+                    
+                }
 			}else{
 				print(error)
 			}
