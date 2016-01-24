@@ -37,6 +37,7 @@
 		A427A2101C4DCFF0007D3AAD /* DefaultRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A427A20F1C4DCFF0007D3AAD /* DefaultRegistrationViewController.swift */; };
 		A429A2751C4F300F00F54FCA /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A429A2741C4F300F00F54FCA /* SearchTableViewController.swift */; };
 		A4B358CB1C51AC410045CE46 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B358CA1C51AC410045CE46 /* ConversationViewController.swift */; };
+		F79B05421C5478610056AAF7 /* wa_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F79B05411C5478610056AAF7 /* wa_logo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		A427A20F1C4DCFF0007D3AAD /* DefaultRegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRegistrationViewController.swift; sourceTree = "<group>"; };
 		A429A2741C4F300F00F54FCA /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		A4B358CA1C51AC410045CE46 /* ConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		F79B05411C5478610056AAF7 /* wa_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wa_logo.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		A427A1B01C4C7C43007D3AAD /* WhatsAuto */ = {
 			isa = PBXGroup;
 			children = (
+				F79B05411C5478610056AAF7 /* wa_logo.jpg */,
 				A427A20D1C4DCD00007D3AAD /* default_car.jpg */,
 				A427A20B1C4C90C7007D3AAD /* buttons.png */,
 				A427A1B11C4C7C43007D3AAD /* AppDelegate.swift */,
@@ -327,6 +330,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F79B05421C5478610056AAF7 /* wa_logo.jpg in Resources */,
 				A427A20E1C4DCD00007D3AAD /* default_car.jpg in Resources */,
 				A427A1BF1C4C7C43007D3AAD /* LaunchScreen.storyboard in Resources */,
 				A427A20C1C4C90C7007D3AAD /* buttons.png in Resources */,
