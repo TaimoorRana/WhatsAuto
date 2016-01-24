@@ -29,17 +29,6 @@ class ViewController: UIViewController {
         
 	}
     
-    @IBAction func pushNotification(sender: AnyObject) {
-        let pushQuery = PFInstallation.query()
-        pushQuery!.whereKey("user", equalTo: "taimoor@gmail.com")
-        
-        // Send push notification to query
-        let push = PFPush()
-        push.setQuery(pushQuery) // Set our Installation query
-        push.setMessage("Willie Hayes injured by own pop fly.")
-        push.sendPushInBackground()
-
-    }
     
 	
 	@IBAction func FBLoginClicked(sender: AnyObject) {

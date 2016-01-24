@@ -89,8 +89,7 @@ class ConversationViewController: UIViewController, UIScrollViewDelegate, UIText
 							frameLabel.frame.size = CGSizeMake(messageLabel.frame.size.width + 10, messageLabel.frame.size.height + 10)
 							frameLabel.frame.origin.x = self.messageScrollView.frame.size.width - self.frameX - frameLabel.frame.size.width
 							frameLabel.frame.origin.y = self.frameY
-							
-							frameLabel.backgroundColor = UIColor.greenColor()
+							frameLabel.backgroundColor = UIColor.init(colorLiteralRed: 0.36, green: 0.58, blue: 0.66, alpha: 0.6)
 							frameLabel.layer.masksToBounds = true
 							frameLabel.layer.cornerRadius = 10
 							self.messageScrollView.addSubview(frameLabel)
