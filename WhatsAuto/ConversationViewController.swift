@@ -144,6 +144,14 @@ class ConversationViewController: UIViewController, UIScrollViewDelegate, UIText
 					print("message sent")
 					self.messageTextView.text = ""
 					self.refreshResults()
+                    let pushQuery = PFInstallation.query()
+                    pushQuery!.whereKey("user", equalTo: "taimoor@gmail.com")
+                    
+                    // Send push notification to query
+                    let push = PFPush()
+                    push.setQuery(pushQuery) // Set our Installation query
+                    push.setMessage("New Message")
+                    push.sendPushInBackground()
 				}else{
 					print("message not sent")
 				}

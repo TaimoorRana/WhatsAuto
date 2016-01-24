@@ -28,13 +28,17 @@ class DefaultRegistrationViewController: UIViewController {
 		user.email = emailTF.text!
 		user.username = emailTF.text!
 		user.password = passwordTF.text!
-		user["phone"] = phoneTF.text!
+		user["phone"] = ""
 		user["licensePlate"] = licensePlateTF.text!
 		user["image"] = "";
 		
 		user.signUpInBackgroundWithBlock { (success:Bool, error:NSError?) -> Void in
 			if error == nil{
 				print("Signed up")
+                let currentInstallation = PFInstallation.currentInstallation()
+                currentInstallation.addUniqueObject("user", forKey: "channels")
+                currentInstallation["user"] = self.emailTF.text!
+                currentInstallation.saveInBackground()
 			}else{
 				print(error)
 			}
