@@ -28,7 +28,7 @@
                                     <action selector="SignInClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="chs-s5-Vwi"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Plate Number" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CHC-RW-S4A">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CHC-RW-S4A">
                                 <rect key="frame" x="103" y="216" width="209" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -111,9 +111,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_car.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ayO-4b-a7n">
-                                <rect key="frame" x="136" y="351" width="142" height="136"/>
-                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XB2-Pz-23U">
                                 <rect key="frame" x="67" y="168" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -150,6 +147,9 @@
                                 <color key="textColor" cyan="0.52849650380000002" magenta="0.70265430210000002" yellow="0.0" black="0.067591594830000004" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_car.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ayO-4b-a7n">
+                                <rect key="frame" x="136" y="355" width="142" height="136"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -297,6 +297,6 @@
         <image name="wa_logo.jpg" width="782" height="777"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yif-rn-kSZ"/>
+        <segue reference="QgX-Fs-hfe"/>
     </inferredMetricsTieBreakers>
 </document>
